@@ -1,5 +1,5 @@
 #!/bin/bash
-REPOURL="https://github.com/e-minguez/laptop_install.git"
+REPOURL="https://github.com/flloreda/laptop_install.git"
 GITDIR="${HOME}/git"
 GITREPO="${GITDIR}/laptop_install"
 
