@@ -70,8 +70,14 @@ pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
 %end
 
 %post
-#dnf groupinstall -y workstation-product-environment
-#dnf update -y
-#systemctl set-default graphical.target
-#systemctl enable gdm.service
+dnf groupinstall -y workstation-product-environment
+dnf update -y
+systemctl set-default graphical.target
+systemctl enable gdm.service
+
+sh -c "$(curl -sSL https://raw.githubusercontent.com/e-minguez/laptop_install/master/bootstrap.sh)"
+
+ansible-playbook -i inventory -e @myvars.yaml ansible/all.yaml
+
+
 %end
