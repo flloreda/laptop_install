@@ -71,11 +71,13 @@ pwpolicy user --minlen=6 --minquality=1 --notstrict --nochanges --emptyok
 pwpolicy luks --minlen=6 --minquality=1 --notstrict --nochanges --notempty
 %end
 
-%post
+%post --log /root/anaconda.log
 dnf groupinstall -y workstation-product-environment
 dnf update -y
 systemctl set-default graphical.target
 systemctl enable gdm.service
+
+cd /root
 
 sh -c "$(curl -sSL https://raw.githubusercontent.com/e-minguez/laptop_install/master/bootstrap.sh)"
 
