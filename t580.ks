@@ -50,11 +50,11 @@ zerombr
 # Disk partitioning information
 part /boot --fstype="ext4" --ondisk=vda --size=1024 --label=boot
 part /boot/efi --fstype="efi" --ondisk=vda --size=200 --fsoptions="defaults,uid=0,gid=0,umask=077,shortname=winnt"
-part pv.312 --fstype="lvmpv" --ondisk=vda --size=19455 --encrypted --passphrase="secreto123." --grow
+part pv.312 --fstype="lvmpv" --ondisk=vda --size=10240 --encrypted --passphrase="secreto123." --grow
 volgroup vg_root --pesize=4096 pv.312
 logvol swap --fstype="swap" --size=2048 --name=swap --vgname=vg_root
 logvol /home --fstype="ext4" --size=3072 --label="home" --name=lv_home --vgname=vg_root
-logvol / --fstype="ext4" --size=15380 --label="root" --name=lv_root --vgname=vg_root
+logvol / --fstype="ext4" --size=10240 --label="root" --name=lv_root --vgname=vg_root --grow
 
 %packages
 @core
