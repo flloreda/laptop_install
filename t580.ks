@@ -79,7 +79,7 @@ systemctl enable gdm.service
 
 cd /root
 
-sh -c "$(curl -sSL https://raw.githubusercontent.com/e-minguez/laptop_install/master/bootstrap.sh)"
+sh -c "$(curl -sSL https://raw.githubusercontent.com/flloreda/laptop_install/master/bootstrap.sh)"
 
 ansible-playbook -i inventory -e @myvars.yaml ansible/all.yaml
 
