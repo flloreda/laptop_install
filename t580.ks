@@ -77,11 +77,7 @@ dnf update -y
 systemctl set-default graphical.target
 systemctl enable gdm.service
 
-cd /root
-
 sh -c "$(curl -sSL https://raw.githubusercontent.com/flloreda/laptop_install/master/bootstrap.sh)"
-
-ansible-playbook -i inventory -e @myvars.yaml ansible/all.yaml
 
 echo "Wait for 1h to debug"
 
