@@ -38,7 +38,7 @@ services --enabled="chronyd"
 timezone Europe/Madrid --isUtc
 
 # Reboot after install
-reboot
+# reboot
 
 # Add user
 user --name=flloreda --groups=weel --password=$6$RQNtSGuG9xWnTQcr$rZ9kGLbVganeTAbtwDFTe.RokABaRurYaQrFNngYlsX1sPU9/CMmDF0yhlqBlS8xPjU3Yh8o9NpO68Edx1/Sr. --iscrypted --gecos="Francisco Lloreda"
@@ -82,6 +82,12 @@ cd /root
 sh -c "$(curl -sSL https://raw.githubusercontent.com/flloreda/laptop_install/master/bootstrap.sh)"
 
 ansible-playbook -i inventory -e @myvars.yaml ansible/all.yaml
+
+echo "Wait for 1h to debug"
+
+sleep 3600
+
+reboot
 
 
 %end
