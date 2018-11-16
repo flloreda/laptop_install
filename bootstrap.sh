@@ -9,4 +9,8 @@ mkdir -p ${GITDIR}
 
 git clone ${REPOURL} ${GITREPO}
 
+cd ${GITREPO}
+
+ansible-playbook -i inventory -e @myvars.yaml ansible/all.yaml
+
 echo "Read the README.md file to continue"
