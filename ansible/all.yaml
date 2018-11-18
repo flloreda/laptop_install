@@ -3,17 +3,17 @@
   hosts: localhost
   gather_facts: yes
   roles:
-#    - repos
+    - repos
 #    - dropbox
 #    - atom
-#    - bluejeans
-#    - chrome
-#    - firefox
+    - bluejeans
+    - chrome
+    - firefox
 #    - golang
 #    - msttcorefonts
 #    - paper-icons
-#    - spotify
-#    - multimedia
+    - spotify
+    - multimedia
     - packages
 #    - misc
 #    - gsettings
