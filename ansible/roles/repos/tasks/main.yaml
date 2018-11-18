@@ -1,10 +1,10 @@
 ---
 # Repo
-- name: Add zhonghuaren repo
-  get_url:
-    url: https://download.opensuse.org/repositories/home:/zhonghuaren/{{ ansible_distribution }}_{{ ansible_distribution_version }}/home:zhonghuaren.repo
-    dest: /etc/yum.repos.d/zhonghuaren.repo
-  become: true
+# - name: Add zhonghuaren repo
+#  get_url:
+#    url: https://download.opensuse.org/repositories/home:/zhonghuaren/{{ ansible_distribution }}_{{ ansible_distribution_version }}/home:zhonghuaren.repo
+#    dest: /etc/yum.repos.d/zhonghuaren.repo
+#  become: true
 
 - name: Install Rpmfusion Free repos
   dnf:
@@ -28,18 +28,18 @@
   command: dnf copr enable -y heliocastro/hack-fonts
   become: true
 
-- name: Enable eminguez repo
-  command: dnf copr enable -y eminguez/eminguez-RPMs
-  become: true
+#- name: Enable eminguez repo
+#  command: dnf copr enable -y eminguez/eminguez-RPMs
+#  become: true
 
-- name: Enable user501254 repo
-  command: dnf copr enable -y user501254/Arc
-  become: true
+#- name: Enable user501254 repo
+#  command: dnf copr enable -y user501254/Arc
+#  become: true
 
 - name: Enable fedora-cisco-openh264
   command: dnf config-manager --set-enabled fedora-cisco-openh264
   become: true
 
-- name: Enable kcli repo
-  command: dnf copr enable -y karmab/kcli
-  become: true
+#- name: Enable kcli repo
+#  command: dnf copr enable -y karmab/kcli
+#  become: true
