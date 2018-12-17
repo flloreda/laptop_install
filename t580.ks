@@ -4,10 +4,10 @@ url --mirrorlist=http://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releas
 repo --name=updates
 repo --name=fedora
 
-ignoredisk --only-use=vda
+ignoredisk --only-use=nvme0n1
 
 # System bootloader configuration
-bootloader --location=mbr --boot-drive=vda
+bootloader --location=mbr --boot-drive=nvme0n1
 
 # Use text install
 text
@@ -44,17 +44,17 @@ reboot
 user --name=flloreda --groups=weel --password=$6$RQNtSGuG9xWnTQcr$rZ9kGLbVganeTAbtwDFTe.RokABaRurYaQrFNngYlsX1sPU9/CMmDF0yhlqBlS8xPjU3Yh8o9NpO68Edx1/Sr. --iscrypted --gecos="Francisco Lloreda"
 
 # Partition clearing information
-clearpart --all --initlabel --drives=vda
+clearpart --all --initlabel --drives=nvme0n1
 zerombr
 
 # Disk partitioning information
-part /boot --fstype="ext4" --ondisk=vda --size=1024 --label=boot
-part /boot/efi --fstype="efi" --ondisk=vda --size=200 --fsoptions="defaults,uid=0,gid=0,umask=077,shortname=winnt"
-part pv.312 --fstype="lvmpv" --ondisk=vda --size=10240 --encrypted --passphrase="linux123" --grow
+part /boot --fstype="ext4" --ondisk=nvme0n1 --size=1024 --label=boot
+part /boot/efi --fstype="efi" --ondisk=nvme0n1 --size=200 --fsoptions="defaults,uid=0,gid=0,umask=077,shortname=winnt"
+part pv.312 --fstype="lvmpv" --ondisk=nvme0n1 --size=10240 --encrypted --passphrase="linux123" --grow
 volgroup vg_root --pesize=4096 pv.312
-logvol swap --fstype="swap" --size=2048 --name=swap --vgname=vg_root
-logvol /home --fstype="ext4" --size=3072 --label="home" --name=lv_home --vgname=vg_root
-logvol / --fstype="ext4" --size=10240 --label="root" --name=lv_root --vgname=vg_root --grow
+logvol swap --fstype="swap" --size=4096 --name=swap --vgname=vg_root
+logvol /home --fstype="ext4" --size=10240 --label="home" --name=lv_home --vgname=vg_root
+logvol / --fstype="ext4" --size=20480 --label="root" --name=lv_root --vgname=vg_root
 
 %packages
 @core
