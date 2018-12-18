@@ -1,20 +1,26 @@
 "*":
-  "asciidoc-preview": {}
   core:
-    autoHideMenuBar: true
-    disabledPackages: [
-      "welcome"
-    ]
-    telemetryConsent: "no"
+    packagesWithKeymapsDisabled: []
+    telemetryConsent: "limited"
     themes: [
-      "one-light-ui"
-      "solarized-light-syntax"
+      "atom-dark-ui"
+      "atom-dark-syntax"
     ]
   editor:
-    softWrap: true
-    softWrapAtPreferredLineLength: true
-  "linter-shellcheck":
-    shellcheckExecutablePath: "/usr/bin/shellcheck"
-  "linter-ui-default":
-    showPanel: true
-  minimap: {}
+    invisibles: {}
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "2f3fc5b5-7ec5-8d0a-792c-3fb5ff1c578e"
+  "platformio-ide-terminal":
+    core: {}
+    iconColors:
+      green: "#05f505"
+    toggles: {}
+  "terminal-plus":
+    core:
+      mapTerminalsTo: "Folder"
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+
