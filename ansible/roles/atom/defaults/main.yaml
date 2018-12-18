@@ -4,11 +4,15 @@ atom_installed_packages:
   - asciidoc-preview
   - autocomplete-ansible
   - autocomplete-asciidoc
+  - ansible-galaxy
+  - autocomplete-ansible
   - busy-signal
+  - git-control
   - file-icons
   - intentions
   - language-ansible
   - language-asciidoc
+  - language-puppet
   - linter
   - linter-ansible-linting
   - linter-ansible-syntax
@@ -19,5 +23,6 @@ atom_installed_packages:
   - open-bash-git
   - solarized-dark-ui
   - teletype
+  - termination
 
 atom_removed_packages:
