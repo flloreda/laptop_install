@@ -4,14 +4,10 @@
   gather_facts: yes
   roles:
     - repos
-#    - dropbox
-#    - atom
+    - atom
     - bluejeans
     - chrome
     - firefox
-#    - golang
-#    - msttcorefonts
-#    - paper-icons
     - spotify
     - multimedia
     - packages
