@@ -5,3 +5,12 @@
     name: https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
     state: present
   become: true
+
+- name: Deploy .desktop files
+  copy:
+    dest: /home/flloreda/.local/share/applications/{{ item }}
+    src: files/{{ item }}
+  with_items:
+    - google-chrome-personal.desktop
+    - google-chrome-RH.desktop
+

@@ -34,7 +34,6 @@ my_packages:
   - gtk-murrine-engine
   - gtk-unico-engine
   - guestfs-browser
-  - hack-fonts
   - inkscape
   - iotop
   - java-1.8.0-openjdk
@@ -128,9 +127,9 @@ my_extensions:
   - "1031"
   - "19"
 
-vg: "t480s"
+vg: "vg_root"
 storage_driver: "overlay2"
-lvname: "dockerlv"
+lvname: "lv_docker"
 lvmountpath: "/var/lib/docker"
 lvsize: "20G"
 

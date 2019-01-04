@@ -4,13 +4,13 @@
   gather_facts: yes
   roles:
     - repos
+    - packages
     - atom
     - bluejeans
     - chrome
     - firefox
     - spotify
     - multimedia
-    - packages
 #    - misc
 #    - gsettings
 #    - dotfiles

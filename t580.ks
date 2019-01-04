@@ -54,7 +54,7 @@ part pv.312 --fstype="lvmpv" --ondisk=nvme0n1 --size=10240 --encrypted --passphr
 volgroup vg_root --pesize=4096 pv.312
 logvol swap --fstype="swap" --size=4096 --name=swap --vgname=vg_root
 logvol /home --fstype="ext4" --size=10240 --label="home" --name=lv_home --vgname=vg_root
-logvol / --fstype="ext4" --size=20480 --label="root" --name=lv_root --vgname=vg_root
+logvol / --fstype="ext4" --size=40960 --label="root" --name=lv_root --vgname=vg_root
 
 %packages
 @core
@@ -77,7 +77,8 @@ dnf update -y
 systemctl set-default graphical.target
 systemctl enable gdm.service
 
-sh -c "$(curl -sSL https://raw.githubusercontent.com/flloreda/laptop_install/master/bootstrap.sh)"
+
+curl -sSL -o /root/bootstrap.sh https://raw.githubusercontent.com/flloreda/laptop_install/master/bootstrap.sh
 
 
 %end

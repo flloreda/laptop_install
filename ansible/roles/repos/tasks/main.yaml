@@ -24,9 +24,9 @@
     state: present
   become: true
 
-- name: Enable hack-fonts repo
-  command: dnf copr enable -y heliocastro/hack-fonts
-  become: true
+  #- name: Enable hack-fonts repo
+  #command: dnf copr enable -y heliocastro/hack-fonts
+  #become: true
 
 #- name: Enable eminguez repo
 #  command: dnf copr enable -y eminguez/eminguez-RPMs
@@ -40,6 +40,6 @@
   command: dnf config-manager --set-enabled fedora-cisco-openh264
   become: true
 
-#- name: Enable kcli repo
-#  command: dnf copr enable -y karmab/kcli
-#  become: true
+- name: Enable kcli repo
+  command: dnf copr enable -y karmab/kcli
+  become: true
