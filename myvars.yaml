@@ -54,6 +54,7 @@ my_packages:
   - libvirt-client
   - libvirt-daemon
   - linphone
+  - libnsl
   - lm_sensors
   - ModemManager
   - mozilla-openh264
@@ -85,6 +86,8 @@ my_packages:
   - sshuttle
   - strace
   - synergy
+  - system-config-printer
+  - system-config-users
   - ShellCheck
   - terminator
   - tigervnc
@@ -96,6 +99,7 @@ my_packages:
   - unzip
   - virt-install
   - virt-manager
+  - vim-enhanced
   - vlc
   - wget
   - xz

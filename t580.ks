@@ -41,7 +41,7 @@ timezone Europe/Madrid --isUtc
 reboot
 
 # Add user
-user --name=flloreda --groups=weel --password=$6$RQNtSGuG9xWnTQcr$rZ9kGLbVganeTAbtwDFTe.RokABaRurYaQrFNngYlsX1sPU9/CMmDF0yhlqBlS8xPjU3Yh8o9NpO68Edx1/Sr. --iscrypted --gecos="Francisco Lloreda"
+user --name=flloreda --groups=wheel --password=$6$RQNtSGuG9xWnTQcr$rZ9kGLbVganeTAbtwDFTe.RokABaRurYaQrFNngYlsX1sPU9/CMmDF0yhlqBlS8xPjU3Yh8o9NpO68Edx1/Sr. --iscrypted --gecos="Francisco Lloreda"
 
 # Partition clearing information
 clearpart --all --initlabel --drives=nvme0n1
